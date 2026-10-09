@@ -69,7 +69,7 @@ function Home() {
         {memory.saved.length > 0 ? (
           <p className="text-sm text-muted">{memory.saved.length} saved</p>
         ) : (
-          <p className="text-sm text-muted">I Am Allu Arjun Die Hard Fann</p>
+          <p className="text-sm text-muted">I Am Allu Arjun </p>
         )}
       </header>
 
