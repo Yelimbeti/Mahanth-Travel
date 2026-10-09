@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  --color-paper: #f3ece1;
+  --color-surface: #fffaf4;
+  --color-ink: #1a1714;
+  --color-muted: #6d645b;
+  --color-line: #e3d5c4;
+  --color-sand: #efe2d2;
+  --color-accent: #c4522a;
+  --color-foam: #fff8f4;
+  --color-pine: #234237;
+  --radius-card: 1.25rem;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--color-sand);
+    color: var(--color-ink);
+  }
+}
+
+.scrim {
+  background: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--color-ink) 92%, transparent) 0%,
+    color-mix(in srgb, var(--color-ink) 45%, transparent) 42%,
+    transparent 72%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
