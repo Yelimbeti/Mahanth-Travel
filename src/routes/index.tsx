@@ -65,7 +65,7 @@ function Home() {
   return (
     <main className="mx-auto w-full max-w-5xl px-4 py-6 sm:py-10">
       <header className="flex items-center justify-between gap-3">
-        <p className="font-display text-2xl text-ink italic">Mahanth-Traveller</p>
+        <p className="font-display text-2xl text-ink italic">"Mahanth-Traveller"</p>
         {memory.saved.length > 0 ? (
           <p className="text-sm text-muted">{memory.saved.length} saved</p>
         ) : (
